@@ -42,9 +42,6 @@ const Menue = () => {
         <Link href="#videos">
           <a onClick={handleClick}>Videos</a>
         </Link>
-        <Link href="#contact">
-          <a onClick={handleClick}>Contact</a>
-        </Link>
       </div>
     </div>
   );
