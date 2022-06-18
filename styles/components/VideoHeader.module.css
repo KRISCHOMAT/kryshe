@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.video {
+  width: 120%;
+}
+
+.heading {
+  width: 100%;
+  position: absolute;
+  font-size: 25vw;
+  font-weight: 900;
+  letter-spacing: 15px;
+  text-align: center;
+  color: white;
+  mix-blend-mode: overlay;
+}

@@ -1,0 +1,134 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: -330px;
+  z-index: 99;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 10px;
+  width: 70px;
+  padding: 10px;
+  gap: 20px;
+  background-color: white;
+  opacity: 0.8;
+}
+
+@keyframes vertical {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes horizontal {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+.menueContainer {
+  cursor: pointer;
+  transform: rotate(0);
+  animation-name: horizontal;
+  animation-duration: 0.5s;
+}
+
+.turn {
+  transform: rotate(90deg);
+  animation-name: vertical;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    width: 70px;
+    border-bottom-left-radius: 10px;
+  }
+  to {
+    width: 170px;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.show {
+  right: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  width: 170px;
+}
+
+@keyframes fadeOut {
+  from {
+    width: 170px;
+    border-bottom-left-radius: 0;
+  }
+  to {
+    width: 70px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.hide {
+  right: -0;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  border-bottom-left-radius: 10px;
+}
+
+@keyframes show {
+  from {
+    color: white;
+    left: 200px;
+  }
+  to {
+    color: black;
+    left: 0;
+  }
+}
+
+@keyframes hide {
+  from {
+    color: black;
+    left: 0;
+  }
+  to {
+    color: white;
+    left: 200px;
+  }
+}
+
+.menue {
+  width: 170px;
+  display: flex;
+  gap: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 100;
+  color: black;
+  animation-name: show;
+  animation-duration: 0.8s;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  border-bottom-left-radius: 10px;
+  top: 50px;
+  left: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.noMenue {
+  color: white;
+  left: 200px;
+  animation-name: hide;
+  animation-duration: 0.8s;
+}
